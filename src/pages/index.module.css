@@ -21,3 +21,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.heroLine {
+  border-bottom: 1px solid #ccc;
+  margin: 0 80px;
+}

@@ -7,12 +7,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Curve',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Curve are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/curve.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -60,7 +60,7 @@ const config = {
         title: 'Curve',
         logo: {
           alt: 'Curve Logo',
-          src: 'img/logo.svg',
+          src: 'img/curve.png',
         },
         items: [
           {
@@ -71,7 +71,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://www.oschina.net/p/curve?hmsr=aladdin1e1',
             label: 'GitHub',
             position: 'right',
           },
@@ -93,16 +93,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Slack',
+                href: 'https://cloud-native.slack.com/archives/C03LFPT6BJM',
               },
             ],
           },
@@ -110,17 +102,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/opencurve/curve',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © Curve Authors ${new Date().getFullYear()}.`,
       },
       prism: {
         theme: lightCodeTheme,

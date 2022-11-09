@@ -10,15 +10,18 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero ', styles.heroBanner, styles.heroLine)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div>
+          <img src="img/curve.png"></img>
+        </div>
+        <h1 className={clsx("hero__title", styles.heroTitle)}>{siteConfig.title}</h1>
+        <p className={clsx(styles.subTitle)}>Curve 是云原生计算基金会 (CNCF) Sandbox 项目，是网易主导开源的高性能、易运维、云原生的分布式存储系统。</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="https://www.oschina.net/p/curve?hmsr=aladdin1e1">
+            Curve Tutorial - 5min ⏱️
           </Link>
         </div>
       </div>
@@ -30,7 +33,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
