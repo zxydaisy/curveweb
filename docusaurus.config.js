@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Curve',
-  tagline: 'Curve are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  tagline: '分布式存储系统',
+  url: 'https://www.opencurve.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,15 +16,15 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'curve', // Usually your GitHub org/user name.
+  projectName: 'CurveWebsite', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-Hans'],
   },
 
   presets: [
@@ -64,17 +64,24 @@ const config = {
         },
         items: [
           {
+            type: 'localeDropdown', position: 'left', 
+          },
+          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://www.oschina.net/p/curve?hmsr=aladdin1e1',
             label: 'GitHub',
             position: 'right',
           },
+          {
+            href: 'https://github.com/opencurve/curve/wiki/Curve-FAQ',
+            label: 'FAQs',
+            position: 'right',
+          }
         ],
       },
       footer: {
@@ -85,7 +92,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                href: '/docs/intro',
               },
             ],
           },
@@ -96,6 +103,10 @@ const config = {
                 label: 'Slack',
                 href: 'https://cloud-native.slack.com/archives/C03LFPT6BJM',
               },
+              {
+                label: 'Wechat',
+                href: 'https://www.opencurve.io/WeChat',
+              }
             ],
           },
           {
