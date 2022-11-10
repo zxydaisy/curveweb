@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Curve",
+    "description": "The title in the navbar"
+  },
+  "item.label.Tutorial": {
+    "message": "Tutorial",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.FAQs": {
+    "message": "FAQs",
+    "description": "Navbar item with label FAQs"
+  }
+}

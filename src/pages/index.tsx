@@ -16,7 +16,7 @@ function HomepageHeader() {
           <img src="img/curve.png"></img>
         </div>
         <h1 className={clsx("hero__title", styles.heroTitle)}>{siteConfig.title}</h1>
-        <p className={clsx(styles.subTitle)}>Curve 是云原生计算基金会 (CNCF) Sandbox 项目，是网易主导开源的高性能、易运维、云原生的分布式存储系统。</p>
+  <p className={clsx(styles.subTitle)}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

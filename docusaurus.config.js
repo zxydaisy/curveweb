@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Curve',
-  tagline: '分布式存储系统',
+  tagline: 'Curve, a New CNCF Sandbox Project, a Cloud-Native distributed storage system.',
   url: 'https://www.opencurve.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
