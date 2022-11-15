@@ -4,15 +4,16 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg?: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
   keyIndex: number;
+  Png?: any;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: '分布式存储系统',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/storage.svg').default,
     keyIndex: 0,
     description: (
       <>
@@ -22,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: ' 高性能',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Png: 'img/performance.png',
     keyIndex: 1,
     description: (
       <>
@@ -33,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: '高可用',
     keyIndex: 2,
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Png: 'img/available.png',
     description: (
       <>
        高可用是 CURVE 的另一大特点。MDS、ChunkServer 以及 SnapShotCloneServer 都支持多实例部署，部分实例异常不影响整个集群的可用性。
@@ -42,13 +43,19 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ keyIndex, title, Svg, description}: FeatureItem) {
+function Feature({ keyIndex, title, Svg, Png, description}: FeatureItem) {
+  console.info(Png);
+  let image =  <Svg className={styles.featureSvg} role="img" />;
+  if (Png) {
+    image = <img className={styles.featureSvg} src={Png}></img>
+  }
+
   const result = (keyIndex % 2 === 1);
   if (result) {
   return (
     <div className={clsx('row')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+       {image}
       </div>
       <div className={clsx("text--left", styles.context)}>
         <h3>{title}</h3>
@@ -62,8 +69,8 @@ function Feature({ keyIndex, title, Svg, description}: FeatureItem) {
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <div className="text--center" datatype={Png} >
+        {image}
       </div>
     </div>);
   }
